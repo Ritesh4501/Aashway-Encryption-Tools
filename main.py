@@ -1,5 +1,5 @@
-# Encryption and Decryption Using Ceaser Cipher
-def ceaser_cipher(text, shift, encrypt = True):
+# Encryption and Decryption Using caesar Cipher
+def caesar_cipher(text, shift, encrypt = True):
     shift = shift if encrypt else -shift
     result = ""
     for char in text:
@@ -167,26 +167,58 @@ def block_cipher(text, key, encrypt = True):
     else:
         return des_round(permuted_text, round_key, encrypt=False)
 
+def main():
+    print("Multi-Cipher Encryption Tool")
+    print("1. Caesar Cipher")
+    print("2. Vigenere Cipher")
+    print("3. Atbash Cipher")
+    print("4. XOR Cipher")
+    print("5. Rail Fence Cipher")
+    print("6. Playfair Cipher")
+    print("7. Block Cipher")
 
-# User input to choose which cipher is to be used for encryption/decryption of text
-choice = input("Choose a cipher(Ceaser or Vigenere or Atbash): ").strip().lower()
+    choice = input("Choose a cipher (1-7): ").strip()
 
-# User input for the text
-text = input("Enter text: ")
+    if choice not in [str(i) for i in range(1,8)]:
+        print("Invalid Choice. Please select 1-7")
+        return
+    text = input("Enter the Text: ")
 
-if choice == "ceaser":
-    shift = int(input("Enter Shift(e.g. 3): "))
-    action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
-    encrypt = True if action == 'E' else False
-    result = ceaser_cipher(text, shift, encrypt)
-elif choice == "vigenere":
-    key = input("Enter a Key(e.g. Help): ")
-    action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
-    encrypt = True if action == "E" else False
-    result = vigenere_cipher(text, key, encrypt)
-elif choice == "atbash":
-    result = atbash_cipher(text)
-else:
-    result = "Invalid Cipher Choice."
+    if choice == '1':
+        shift = int(input("Enter the shift (e.g. 3): "))
+        action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
+        encrypt = True if action == 'E' else False
+        result = caesar_cipher(text, shift, encrypt)
+    elif choice == '2':
+        key = input("Enter the key (e.g., SECRET): ")
+        action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
+        encrypt = True if action == 'E' else False
+        result = vigenere_cipher(text, key, encrypt)
+    elif choice == '3':
+        result = atbash_cipher(text)
+    elif choice == '4':
+        key = input("Enter the key (e.g., XORKEY): ")
+        result = xor_cipher(text, key)
+    elif choice == '5':
+        key = int(input("Enter the key (e.g., 3): "))
+        action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
+        encrypt = True if action == 'E' else False
+        result = rail_fence_cipher(text, key, encrypt)
+    elif choice == '6':
+        key = input("Enter the key (e.g., PLAYFAIR): ")
+        action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
+        encrypt = True if action == 'E' else False
+        result = playfair_cipher(text, key, encrypt)
+    elif choice == '7':
+        binary_text = ''.join(format(ord(c), '08b') for c in text)
+        binary_key = ''.join(format(ord(c), '08b') for c in input("Enter a 4-bit key (e.g., 1010): "))
+        action = input("Encrypt or Decrypt? (E/D): ").strip().upper()
+        encrypt = True if action == 'E' else False
+        result = block_cipher(binary_text, binary_key, encrypt)
+        result = ''.join(chr(int(result[i:i + 8], 2)) for i in range(0, len(result), 8))
 
-print(f"Result: {result}")
+    print(f"Result: {result}")
+
+# Deployment of main function 
+if __name__ == "__main__":
+    main()
