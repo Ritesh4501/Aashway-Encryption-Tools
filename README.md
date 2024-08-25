@@ -36,7 +36,7 @@ This Tools support multiple ciphers, including Ceaser, Vigenere, Atbash, XOR, Ra
 
 1. **Clone the Repository**:  
     ```bash
-   git clone https://github.com/Ritesh4501/Encryption-Tools.git
+   git clone https://github.com/Ritesh4501/Aashway-Encryption-Tools.git
    cd Encryption-Tools
    ```
 2. **Run the Script**:
