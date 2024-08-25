@@ -1,10 +1,13 @@
-# Encryption Tools
- Simple Encryption and Decryption tool using Multiple Ciphers 
+# Multi-Cipher Encryption Tool
+Simple Encryption and Decryption tool using Multiple Ciphers 
 
 In this Project, I have implemented Multiple Ciphers for Encryption and Decryption. 
-It is a Python-based tool which provides a simple way to encrypt and decrypt messages using various classical and basic cryptographic algorithm.
-
-This Tools support multiple ciphers, including Ceaser, Vigenere, Atbash, XOR, Rail Fence, Play-Fair, Block Cipher.
+It is a Python-based tool which provides a simple way to encrypt and decrypt messages using various classical and basic cryptographic algorithm.  
+This Tools support multiple ciphers, including Ceaser, Vigenere, Atbash, XOR, Rail Fence, Play-Fair, Block Cipher.  
+This is the first task of my as a part of Cyber Security Internship at **Aashway**.  
+The project challenged me to design a flexible system capable of handling various cipher techniques, each with its unique encryption and decryption processes.
+Working on this tool has greatly deepened my understanding of cryptographic principles, algorithm design, and secure communication.  
+I’m eager to continue building upon this foundation and explore more advanced cryptography concepts in the future!
 
 ## Features
 - **Block Cipher (Using Simple DES-Like)**: It is a Simplified version of DES algorithm which is use for educational purposes only.
@@ -67,3 +70,9 @@ This Tools support multiple ciphers, including Ceaser, Vigenere, Atbash, XOR, Ra
 2. **Enter Text**: Input `HELLO`.
 3. **Enter Key**: Provide a key word, such as `SECRET`.
 4. **Encrypt**: The tool outputs `RIJVS`
+
+# Contributing
+Contributions are welcome! If you have suggestions for additional features, improvements, or new ciphers, feel free to submit a pull request.
+
+# License
+This project is licensed under the MIT License. See the [LICENSE]() file for details.
