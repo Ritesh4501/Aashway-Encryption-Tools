@@ -33,7 +33,7 @@ I’m eager to continue building upon this foundation and explore more advanced 
 # Getting Started 
 ## Prerequisites
 
-- **Python 3.x**: Ensure you have installed Python 3.x installed in your system. You can download it from [python.org]()
+- **Python 3.x**: Ensure you have installed Python 3.x installed in your system. You can download it from [python.org](https://www.python.org/)
 
 ### Installation 
 
@@ -75,4 +75,4 @@ I’m eager to continue building upon this foundation and explore more advanced 
 Contributions are welcome! If you have suggestions for additional features, improvements, or new ciphers, feel free to submit a pull request.
 
 # License
-This project is licensed under the MIT License. See the [LICENSE]() file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
